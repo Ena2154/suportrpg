@@ -3,4 +3,20 @@ name = "suportrpg"
 version = "0.1.0"
 edition = "2024"
 
+# ... [package] セクションの下 ...
+
+# アプリの動作に必要となるライブラリを追加します
 [dependencies]
+android_activity = "0.5.2" # Androidアプリのライフサイクルを管理します
+
+# アプリの情報を追記します
+[package.metadata.android]
+# アプリ名
+package_name = "jp.co.example.myapp" # パッケージ名はユニークなものにしてください
+# ラベル（ホーム画面に表示される名前）
+label = "My Rust App"
+# アセットディレクトリ（今は使いませんが設定しておきます）
+assets = "assets"
+# --- ここから追記してください ---
+target_sdk_version = 34
+min_sdk_version = 23
